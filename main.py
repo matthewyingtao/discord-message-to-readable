@@ -22,10 +22,10 @@ with open("message.txt", "r") as message:
     seperate_message = message.readlines()
 
 
-for name_line in seperate_message:
-    current_line = remove_date(name_line)
+for line in seperate_message:
+    current_line = remove_date(line)
     if len(current_line) == 2:
-        for name_line in current_line:
-            print(f"{Fore.GREEN}{name_line}")
+        for color_line in current_line:
+            print(f"{Fore.GREEN}{color_line}")
     else:
-        print(f"{Fore.RESET}{str(name_line)}")
+        print(f"{Fore.RESET}{str(line)}")
