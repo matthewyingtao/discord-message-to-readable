@@ -1,9 +1,11 @@
 from colorama import Fore
 from collections import Counter
 
-def most_frequent(List): 
-    occurence_count = Counter(List) 
+
+def most_frequent(List):
+    occurence_count = Counter(List)
     return [line[0] for line in occurence_count.most_common(2)]
+
 
 def remove_date(line):
     if "Today" in line:
@@ -18,7 +20,8 @@ def remove_date(line):
         return line
     return name_line
 
-message  = open("message.txt", "r")
+
+message = open("message.txt", "r")
 
 seperate_message = message.readlines()
 
