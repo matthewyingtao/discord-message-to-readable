@@ -18,9 +18,9 @@ def remove_date(line_to_remove):
         return line_to_remove
     return name_line
 
-message  = open("message.txt", "r")
+with open("message.txt", "r") as message:
+    seperate_message = message.readlines()
 
-seperate_message = message.readlines()
 
 for name_line in seperate_message:
     current_line = remove_date(name_line)
